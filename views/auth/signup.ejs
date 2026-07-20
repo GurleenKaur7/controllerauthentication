@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-left">
+                <img src="/images/Group1.png" class="hero-img" alt="Hero">
+
+            </div>
+
+<div class="auth-right">
+            <h2>Sign Up</h2>
+
+            <% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+<% } %>
+      <p class="subtitle">Enter your details below</p>
+
+
+
+
+      <form action="/signup" method="POST">
+        <input type="text" name="username" placeholder="Enter Username" required>
+        
+        
+        <input type="text" name="email" placeholder="Enter your email" required>
+        
+        <p style="align-items: center;">Select Gender:</p>
+
+<div style="display: flex; gap: 10px; margin-bottom: 10px;">
+  <label>
+    <input type="radio" name="gender" value="male" required>
+    Male
+  </label>
+
+  <label>
+    <input type="radio" name="gender" value="female" required>
+    Female
+  </label>
+</div>
+
+
+
+
+<input type="number" name="birth_year" placeholder="Birth Year" required>
+
+<input type="text" name="designation" placeholder="Designation" required>
+
+<input type="text" name="company_name" placeholder="Company Name" required>
+        
+        
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit" class="primary-btn">Sign In</button>
+      </form>
+      <small class="terms">
+        By clicking Sign In, you agree to the terms of use.
+      </small>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
